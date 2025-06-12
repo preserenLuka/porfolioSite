@@ -1,0 +1,22 @@
+:root {
+  --bg-color: #101010;
+  --text-color: #b7b7b6;
+  --accent-blue: #3a8fff;
+  --accent-blue-light: #7ecbff;
+  --about-bg: #111111;
+  --about-border: #242424;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.light-theme {
+  --bg-color: #f7f7f7;
+  --text-color: #222;
+  --accent-blue: #3a8fff;
+  --accent-blue-light: #005fa3;
+  --about-bg: #f9f9f9;
+  --about-border: rgba(58, 143, 255, 0.1);
+}

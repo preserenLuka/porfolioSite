@@ -1,0 +1,34 @@
+.navbar {
+  width: 60%;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  color: var(--text-color);
+  font-size: 2rem;
+}
+
+.left {
+  font-weight: bold;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.right {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.right li a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.right li a:hover {
+  color: var(--accent-blue);
+}
