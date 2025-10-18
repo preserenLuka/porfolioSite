@@ -1,34 +1,48 @@
 .navbar {
-  width: 60%;
-  margin: 2rem auto 0 auto;
+  width: 100%;
+  padding: 1.2rem 0;
+  background: none; /* match page */
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.navInner {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: none;
-  color: var(--text-color);
-  font-size: 2rem;
 }
 
 .left {
-  font-weight: bold;
-  font-size: 1.8rem;
-  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.6px;
+  color: var(--text-color);
 }
 
 .right {
   display: flex;
-  gap: 2rem;
+  gap: 1.4rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .right li a {
-  color: var(--text-color);
+  color: var(--muted-text);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.18s, transform 0.12s;
 }
 
 .right li a:hover {
   color: var(--accent-blue);
+  transform: translateY(-2px);
+}
+
+/* small icon spacing if ThemeToggle is inside nav list */
+.right .toggle {
+  display: flex;
+  align-items: center;
 }

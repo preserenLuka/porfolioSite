@@ -1,22 +1,30 @@
 :root {
-  --bg-color: #101010;
+  --bg-color: #0f1112; /* page background (dark gray) */
   --text-color: #b7b7b6;
+  --muted-text: #9ea0a0;
   --accent-blue: #3a8fff;
   --accent-blue-light: #7ecbff;
-  --about-bg: #111111;
-  --about-border: #242424;
+  --card-bg: #111316; /* slightly lighter than page */
+  --card-border: rgba(62, 88, 128, 0.12);
+  --glass-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
 }
 
+/* body */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* light theme overrides */
 .light-theme {
   --bg-color: #f7f7f7;
   --text-color: #222;
-  --accent-blue: #3a8fff;
-  --accent-blue-light: #005fa3;
-  --about-bg: #f9f9f9;
-  --about-border: rgba(58, 143, 255, 0.1);
+  --muted-text: #5a5a5a;
+  --accent-blue: #1662b8;
+  --accent-blue-light: #2180d6;
+  --card-bg: #ffffff;
+  --card-border: rgba(33, 130, 214, 0.08);
+  --glass-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
 }
