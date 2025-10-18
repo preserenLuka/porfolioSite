@@ -1,30 +1,67 @@
 :root {
-  --bg-color: #0f1112; /* page background (dark gray) */
-  --text-color: #b7b7b6;
-  --muted-text: #9ea0a0;
+  /* Dark-ish default, but a bit softer than pure black */
+  --bg-color: #111318;
+  --text-color: #c2c4c3; /* softer light-gray text */
+  --muted-text: #9aa0a2; /* subtle muted text */
   --accent-blue: #3a8fff;
   --accent-blue-light: #7ecbff;
-  --card-bg: #111316; /* slightly lighter than page */
-  --card-border: rgba(62, 88, 128, 0.12);
-  --glass-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
+
+  /* Cards / panels */
+  --card-bg: #15191b; /* slightly lighter than page */
+  --card-border: rgba(120, 150, 190, 0.06);
+  --about-bg: var(--card-bg);
+  --about-border: rgba(58, 143, 255, 0.1);
+
+  /* shadows */
+  --glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+
+  /* small UI tweaks */
+  --focus-outline: rgba(58, 143, 255, 0.14);
 }
 
-/* body */
+/* page */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.22s ease, color 0.18s ease;
 }
 
-/* light theme overrides */
+/* Light theme: softer off-white and gentler contrast */
 .light-theme {
-  --bg-color: #f7f7f7;
-  --text-color: #222;
-  --muted-text: #5a5a5a;
+  --bg-color: #eaebed; /* soft gray, not pure white */
+  --text-color: #22272a; /* readable but not pure black */
+  --muted-text: #646b6f;
   --accent-blue: #1662b8;
   --accent-blue-light: #2180d6;
-  --card-bg: #ffffff;
-  --card-border: rgba(33, 130, 214, 0.08);
-  --glass-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+
+  --card-bg: #fbfcfd; /* very light panel */
+  --card-border: rgba(16, 24, 32, 0.06);
+  --about-bg: var(--card-bg);
+  --about-border: rgba(16, 24, 32, 0.06);
+
+  --glass-shadow: 0 8px 30px rgba(2, 6, 10, 0.04);
+}
+
+/* small helpers used across components */
+:root,
+.light-theme {
+  /* enable subtle focus outlines for keyboard users */
+  --outline-size: 3px;
+}
+
+/* example global utilities (optional) */
+a {
+  color: var(--accent-blue);
+  transition: color 0.15s ease;
+}
+a:hover {
+  color: var(--accent-blue-light);
+}
+
+button,
+[role="button"] {
+  outline-color: var(--focus-outline);
+  transition: transform 0.08s ease, box-shadow 0.12s ease;
 }

@@ -1,5 +1,5 @@
-const Projects: React.FC = () => {
-  return <>projects</>;
-};
+import ProjectsCard from "./ProjectsCard";
 
-export default Projects;
+export default function Projects() {
+  return <ProjectsCard variant="full" />;
+}

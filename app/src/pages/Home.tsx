@@ -1,18 +1,19 @@
-import AboutSection from "../components/home/AboutSection";
+import AboutCard from "./AboutCard";
+import ProjectsCard from "./ProjectsCard";
 
 export default function Home() {
   return (
     <div
       style={{
-        width: "60%",
+        width: "80%",
         margin: "3rem auto 0 auto",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+        gap: "1.5rem",
       }}
     >
-      <AboutSection />
-      {/* Other sections will go here */}
+      <AboutCard variant="compact" href="/about" />
+      <ProjectsCard variant="compact" href="/projects" />
     </div>
   );
 }
