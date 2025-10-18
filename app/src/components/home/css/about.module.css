@@ -49,3 +49,58 @@
   font-weight: 400;
   opacity: 0.95;
 }
+
+/* modal / map styles */
+.mapOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 6, 8, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  padding: 20px;
+}
+
+.mapModal {
+  width: min(900px, 98%);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  box-shadow: var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+/* responsive iframe wrapper */
+.mapFrameWrap {
+  width: 100%;
+  height: 100%;
+}
+
+/* close button */
+.closeBtn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: var(--muted-text);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 6px;
+  transition: color 0.12s, transform 0.08s;
+}
+
+.closeBtn:hover {
+  color: var(--accent-blue);
+  transform: scale(1.05);
+}
+
+/* make iframe height adapt on small screens */
+@media (max-width: 720px) {
+  .mapFrameWrap iframe {
+    height: 60vh;
+  }
+}
