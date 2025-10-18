@@ -1,4 +1,3 @@
-import React from "react";
 import { PiMapPinFill } from "react-icons/pi";
 import styles from "./css/about.module.css";
 

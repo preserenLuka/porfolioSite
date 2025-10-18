@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { CiLight, CiDark } from "react-icons/ci";
 import { motion, AnimatePresence } from "framer-motion";
 
